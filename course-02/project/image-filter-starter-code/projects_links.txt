@@ -1,0 +1,5 @@
+Project Github Repository URL:
+https://github.com/khadidjaArezki/cloud-developer/tree/master/course-02/project/image-filter-starter-code
+
+Elastic Beanstalk Deployement URL:
+http://hadhadimagefilter-dev-dev.us-east-1.elasticbeanstalk.com/
