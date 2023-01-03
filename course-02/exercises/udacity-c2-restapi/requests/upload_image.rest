@@ -1,0 +1,4 @@
+PUT https://hadhad-dev-s3-fs.s3.amazonaws.com/xander2.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAXDRK2ZZBNO5U5YX4%2F20221227%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221227T202148Z&X-Amz-Expires=300&X-Amz-Security-Token=%20&X-Amz-Signature=35294fd851b23d1cdea4bace3afe5a2aa0de930425ce94e3a5b0892e958076cb&X-Amz-SignedHeaders=host
+Content-Type: image/jpeg
+
+< ./mock/xander2.jpg
