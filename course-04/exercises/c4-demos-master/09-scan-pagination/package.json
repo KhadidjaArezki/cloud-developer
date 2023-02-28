@@ -1,0 +1,15 @@
+{
+  "name": "get-paginated-groups",
+  "version": "1.0.0",
+  "description": "Get paginated image items from DynamoDB",
+  "main": "index.js",
+  "scripts": {
+    "package": "zip -r http-metrics.zip .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "hadhad",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1110.0"
+  }
+}

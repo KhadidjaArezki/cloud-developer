@@ -8,22 +8,27 @@ const groupsTable = process.env.GROUPS_TABLE
 
 exports.handler = async (event) => {
   console.log('Processing event: ', event)
-
-  // TODO: Read and parse "limit" and "nextKey" parameters from query parameters
-  // let nextKey // Next key to continue scan operation if necessary
-  // let limit // Maximum number of elements to return
-
+  
   // HINT: You might find the following method useful to get an incoming parameter value
-  // getQueryParameter(event, 'param')
-
-  // TODO: Return 400 error if parameters are invalid
+  // DONE: Read and parse "limit" and "nextKey" parameters from query parameters
+  
+  let nextKeyStr = getQueryParameter(event, 'nextKey') // Next key to continue scan operation if necessary
+  let nextKey =  JSON.parse(decodeURIComponent(nextKeySrt))
+  
+  let limitStr = getQueryParameter(event, 'limit') // Maximum number of elements to return
+  let limit = parseInt(limitStr)
+  
+  // DONE: Return 400 error if parameters are invalid
+  if ((!limit || limit < 0) || !nextKey) return {
+    statusCode: 400,
+  }
 
   // Scan operation parameters
   const scanParams = {
     TableName: groupsTable,
-    // TODO: Set correct pagination parameters
-    // Limit: ???,
-    // ExclusiveStartKey: ???
+    // DONE: Set correct pagination parameters
+    Limit: limit,
+    ExclusiveStartKey: nextKey
   }
   console.log('Scan params: ', scanParams)
 
